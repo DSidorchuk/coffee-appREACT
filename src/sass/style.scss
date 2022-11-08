@@ -1,0 +1,12 @@
+@import './bootstrap-reboot.min';
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@400;700');
+
+* {
+    font-family: 'Merienda', cursive;
+}
+
+@import '../components/header/header.scss';
+@import '../components/about/about.scss';
+@import '../components/coffee/coffee.scss';
+@import '../components/footer/footer.scss';
+

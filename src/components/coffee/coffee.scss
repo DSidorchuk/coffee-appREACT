@@ -1,0 +1,93 @@
+.coffee {
+    margin-top: 60px;
+    &__controlpanel {
+        display: grid;
+        grid-template-columns: 334px 326px;
+        gap: 83px;
+        justify-content: center;
+        align-items: center;
+    }
+    &__input {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        color: #000000;
+        input {
+            margin-left: 19px;
+            padding-left: 36px;
+            width: 180px;
+            height: 30px;
+            background: #FFFFFF;
+            box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+            border-radius: 4px;
+            border: 0px
+        }
+    }
+    &__filter {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__title {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        color: #000000;
+    }
+    &__buttons {
+        display: grid;
+        grid-template-columns: repeat(3, 75px);
+        grid-template-rows: 30px;
+        gap: 5px;
+    }
+    &__btn {
+        background: #FFFFFF;
+        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+        border: 0px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 17px;
+        text-align: center;
+        color: #000000;
+        cursor: pointer;
+    }
+    &__items {
+        margin-top: 61px;
+        display: grid;
+        grid-template-columns: repeat(3, 220px);
+        grid-template-rows: repeat(2, 270px);
+        grid-auto-rows: 270px;
+        gap: 60px 69px;
+        justify-content: center;
+    }
+    &__item {
+        padding: 0 25px 0 23px;
+        background: #FFFFFF;
+        border-radius: 8px;
+        filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
+        &-img {
+            display: block;
+            margin: 0 auto;
+            margin-top: 37px;
+            width: 167px;
+            height: 115px;
+        }
+        &-name, &-country, &-price {
+            margin-top: 14px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            text-align: right;
+            color: #000000;
+        }
+        &-name {
+            text-align: center;
+        }
+        &-price {
+            font-weight: 700;
+        }
+    }
+}
