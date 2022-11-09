@@ -2,8 +2,10 @@ import CoffeeItem from "../coffee-item/coffee-item";
 
 const CoffeeItems = (props) => {
     const coffeeList = props.data.map(item => {
+        const {id, ...itemProps} = item;
         return (
-            <CoffeeItem {...item}/>
+            <CoffeeItem key={id}
+                        {...itemProps}/>
         )
     });
     return (

@@ -16,25 +16,57 @@ class App extends Component {
         super(props);
         this.state = {
             data: [
-                {img: coffePhoto, name: 'AROMISTICO Coffee 1 kg', country: 'Brazil', price: 6.99},
-                {img: coffePhoto, name: 'AROMISTICO Coffee 1 kg', country: 'Kenya', price: 6.99},
-                {img: coffePhoto, name: 'AROMISTICO Coffee 1 kg', country: 'Columbia', price: 6.99},
-                {img: coffePhoto, name: 'AROMISTICO Coffee 1 kg', country: 'Brazil', price: 6.99},
-                {img: coffePhoto, name: 'AROMISTICO Coffee 1 kg', country: 'Brazil', price: 6.99},
-                {img: coffePhoto, name: 'AROMISTICO Coffee 1 kg', country: 'Brazil', price: 6.99}
-            ]
+                {img: coffePhoto, name: 'AROMISTICO Coffee 1 kg', country: 'Brazil', price: 6.99, id: 1},
+                {img: coffePhoto, name: 'AROMISTICO Coffee 1 kg', country: 'Kenya', price: 6.99, id: 2},
+                {img: coffePhoto, name: 'AROMISTICO Coffee 1 kg', country: 'Columbia', price: 6.99, id: 3},
+                {img: coffePhoto, name: 'AROMISTICO Coffee 1 kg', country: 'Brazil', price: 6.99, id: 4},
+                {img: coffePhoto, name: 'AROMISTICO Coffee 1 kg', country: 'Brazil', price: 6.99, id: 5},
+                {img: coffePhoto, name: 'DOLCE Coffee 1 kg', country: 'Brazil', price: 6.99, id: 6}
+            ],
+            input: '',
+            filter: '',
         }
     }
 
+    onUpdateSearch = (input) => {
+        this.setState({input});
+    }
+
+    searchCoffee = (items, input) => {
+        if(input.length === 0) {
+            return items;
+        }
+        return items.filter(item => {
+            return item.name.indexOf(input) > -1;
+        })
+    }
+
+    onFilter = (filter) => {
+        this.setState({filter})
+    }
+
+    filterCoffee = (items, filter) => {
+        if(filter.length === 0) {
+            return items;
+        }
+        return items.filter(item => {
+            return item.country === filter;
+        })
+    }
+
     render() {
-        const data = this.state.data;
+        const {data, input, filter} = this.state
+        const items = this.filterCoffee(this.searchCoffee(data, input), filter);
 
         return (
             <div>
                 <Header logo={headerLogo}/>
                 <About photo={aboutPhoto}
                     icon={beans}/>
-                <Coffee data={data}/>
+                <Coffee data={items}
+                        onSearch={this.onUpdateSearch}
+                        onFilter={this.onFilter}
+                        filter={filter}/>
                 <Footer logo={footerLogo}
                         icon={beans}/>
             </div>
@@ -44,3 +76,19 @@ class App extends Component {
 }
 
 export default App;
+
+    // getData = (url) => {
+    //     fetch(url)
+    //     .then(response => response.json())
+    //     .then(json => this.setData(json));
+    // }
+
+    // setData = (items) => {
+    //     // this.setState(({data}) => {
+    //     //     return {
+    //     //         data: items
+    //     //     }
+    //     // })
+    // }
+
+    // this.getData('http://localhost:3000/coffee')

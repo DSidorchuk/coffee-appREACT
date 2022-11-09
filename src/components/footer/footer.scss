@@ -1,9 +1,7 @@
 .footer {
     padding-top: 30px;
-    position: relative;
     height: 150px;
     &__menu {
-        position: relative;
         margin: 0 auto;
         margin-top: 30px;
         padding: 0;
@@ -23,10 +21,15 @@
             }
         }
     }
+    &__box {
+        position: relative;
+        margin: 0 auto;
+        width: 360px;
+    }
     &__icon {
         position: absolute;
-        left: 483px;
-        top: 51px;
+        left: -27px;
+        top: -7px;
     }
     &__logo {
         position: relative;
