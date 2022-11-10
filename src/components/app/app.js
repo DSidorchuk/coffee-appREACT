@@ -4,7 +4,7 @@ import headerLogo from '../../icons/header_logo.png';
 import aboutPhoto from '../../img/about.jpg';
 import beans from '../../icons/black_beans.png';
 import footerLogo from '../../icons/footer_logo.png';
-import coffePhoto from '../../img/coffee_item.jpg';
+// import coffePhoto from '../../img/coffee_item.jpg';
 
 import Header from '../header/header.js';
 import About from '../about/about.js';
@@ -15,18 +15,22 @@ class App extends Component {
     constructor (props) {
         super(props);
         this.state = {
-            data: [
-                {img: coffePhoto, name: 'AROMISTICO Coffee 1 kg', country: 'Brazil', price: 6.99, id: 1},
-                {img: coffePhoto, name: 'AROMISTICO Coffee 1 kg', country: 'Kenya', price: 6.99, id: 2},
-                {img: coffePhoto, name: 'AROMISTICO Coffee 1 kg', country: 'Columbia', price: 6.99, id: 3},
-                {img: coffePhoto, name: 'AROMISTICO Coffee 1 kg', country: 'Brazil', price: 6.99, id: 4},
-                {img: coffePhoto, name: 'AROMISTICO Coffee 1 kg', country: 'Brazil', price: 6.99, id: 5},
-                {img: coffePhoto, name: 'DOLCE Coffee 1 kg', country: 'Brazil', price: 6.99, id: 6}
-            ],
+            data: [],
             input: '',
             filter: '',
-        }
+        };
     }
+
+    componentDidMount() {
+        fetch('http://localhost:3000/coffee')
+        .then(response => response.json())
+        .then(result => {
+            console.log(result);
+            this.setState({
+                data: result
+            })
+        });
+    };
 
     onUpdateSearch = (input) => {
         this.setState({input});
@@ -77,18 +81,12 @@ class App extends Component {
 
 export default App;
 
-    // getData = (url) => {
-    //     fetch(url)
-    //     .then(response => response.json())
-    //     .then(json => this.setData(json));
-    // }
+            // [
+            //     {img: coffePhoto, name: 'AROMISTICO Coffee 1 kg', country: 'Brazil', price: 6.99, id: 1},
+            //     {img: coffePhoto, name: 'AROMISTICO Coffee 1 kg', country: 'Kenya', price: 6.99, id: 2},
+            //     {img: coffePhoto, name: 'AROMISTICO Coffee 1 kg', country: 'Columbia', price: 6.99, id: 3},
+            //     {img: coffePhoto, name: 'AROMISTICO Coffee 1 kg', country: 'Brazil', price: 6.99, id: 4},
+            //     {img: coffePhoto, name: 'AROMISTICO Coffee 1 kg', country: 'Brazil', price: 6.99, id: 5},
+            //     {img: coffePhoto, name: 'DOLCE Coffee 1 kg', country: 'Brazil', price: 6.99, id: 6}
+            // ],
 
-    // setData = (items) => {
-    //     // this.setState(({data}) => {
-    //     //     return {
-    //     //         data: items
-    //     //     }
-    //     // })
-    // }
-
-    // this.getData('http://localhost:3000/coffee')

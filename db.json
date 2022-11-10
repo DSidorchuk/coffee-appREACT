@@ -1,43 +1,43 @@
 {
   "coffee": [
       {
-        "img": "../../img/coffee_item.jpg", 
+        "img": "./coffee_item.jpg", 
         "name": "AROMISTICO Coffee 1 kg", 
         "country": "Brazil", 
         "price": 6.99,
         "id": 1
       },
       {
-        "img": "../../img/coffee_item.jpg", 
+        "img": "./coffee_item.jpg", 
         "name": "AROMISTICO Coffee 1 kg", 
         "country": "Kenya", 
         "price": 6.99,
         "id": 2
       },
       {
-        "img": "../../img/coffee_item.jpg", 
+        "img": "./coffee_item.jpg", 
         "name": "AROMISTICO Coffee 1 kg", 
         "country": "Columbia", 
         "price": 6.99,
         "id": 3
       },
       {
-        "img": "../../img/coffee_item.jpg", 
+        "img": "./coffee_item.jpg", 
         "name": "AROMISTICO Coffee 1 kg", 
         "country": "Brazil", 
         "price": 6.99,
         "id": 4
       },
       {
-        "img": "../../img/coffee_item.jpg", 
+        "img": "./coffee_item.jpg", 
         "name": "AROMISTICO Coffee 1 kg", 
         "country": "Brazil", 
         "price": 6.99,
         "id": 5
       },
       {
-        "img": "../../img/coffee_item.jpg", 
-        "name": "AROMISTICO Coffee 1 kg", 
+        "img": "./coffee_item.jpg", 
+        "name": "DOLCE Coffee 1 kg", 
         "country": "Brazil", 
         "price": 6.99,
         "id": 6
