@@ -6,10 +6,10 @@ import beans from '../../icons/black_beans.png';
 import footerLogo from '../../icons/footer_logo.png';
 // import coffePhoto from '../../img/coffee_item.jpg';
 
-import Header from '../header/header.js';
+import Header from '../header/Header.js';
 import About from '../about/about.js';
-import Coffee from '../coffee/coffee.js';
-import Footer from '../footer/footer.js';
+import Coffee from '../coffee/Coffee.js';
+import Footer from '../footer/Footer.js';
 
 class App extends Component {
     constructor (props) {

@@ -1,4 +1,4 @@
-import CoffeeItem from "../coffee-item/coffee-item";
+import CoffeeItem from "../coffee-item/Coffee-item";
 
 const CoffeeItems = (props) => {
     const coffeeList = props.data.map(item => {

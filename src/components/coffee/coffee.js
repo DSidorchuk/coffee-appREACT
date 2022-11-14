@@ -1,5 +1,5 @@
-import CoffeeControl from "../coffee-control/coffee-control";
-import CoffeeItems from "../coffee-items/coffee-items";
+import CoffeeControl from "../coffee-control/Coffee-control";
+import CoffeeItems from "../coffee-items/Coffee-items";
 
 const Coffee = (props) => {
     const {data, onSearch, onFilter, filter} = props;

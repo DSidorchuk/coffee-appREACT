@@ -1,5 +1,5 @@
-import CoffeeSearch from "../coffee-search/coffee-search";
-import CoffeeFilter from "../coffee-filter/coffee-filter";
+import CoffeeSearch from "../coffee-search/Coffee-search";
+import CoffeeFilter from "../coffee-filter/Coffee-filter";
 
 const CoffeeControl = (props) => {
     const {onSearch, onFilter, filter} = props;

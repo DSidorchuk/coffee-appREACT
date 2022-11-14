@@ -1,4 +1,4 @@
-import Menu from '../menu/menu.js';
+import Menu from '../menu/Menu.js';
 
 const Header = (props) => {
     const logo = props.logo;
